@@ -5,7 +5,20 @@
 
 Create a text and image/gif based game that allows the user to arrive at different "destinations" based on links that they click.
 
-The game can be as simple or as complicated as you would like to make it.
+For each page of your adventure, fill the page with at least one image, some text describing the situation.
+
+A given page can have links in them that present the user with choices that they can make that will take them on to the next stage of their adventure.
+
+Use `relative paths` and sub-directories to structure your adventure game. For example: if your game is displaying the page for the dining room: `/house/dining-rooom.html`
+
+```
+<p>Where would you like to go?</p>
+<a href="../index.html">Back to start of game.</a>
+<a href="study.html">The Study</a>
+<a href="/dungeon/index.html">main dungeon</a>
+<a href="/garden/index.html">main garden</a>
+<a href="/garden/greenhouse.html">garden greenhouse</a>
+```
 
 Below are some basic rules to get you started. 
 
@@ -24,10 +37,8 @@ How about...
 
 ### Pseudo-coded Example
 
-What is your name?
-* `Sean`
 
-Nice to meet you, `Sean`. What year would you like to go to? **(YYYY)**
+What year would you like to go to? **(YYYY)**
 * `2015 or later`
     * I see you're a fan of Back to the Future 2. Would you rather deal with Biff, or Griff?
         * Biff
@@ -66,7 +77,6 @@ Nice to meet you, `Sean`. What year would you like to go to? **(YYYY)**
                     * Interesting choice. Unfortunately the Doc can't grab Clara and get back to the car in time. He ends up staying in 1855 with her.
                 * Leave her
                     * Smart choice. Unfortunately the Doc was deeply in love with Clara, and when he gets back to 1985 he becomes very depressed.
-
 
 ### Further: Make Your Game Repeat as many times as the player wants 
 * Have your player repeat a set of challenges or questions over again- if a player enters a situation or room, allow them to leave and come back if they want.
